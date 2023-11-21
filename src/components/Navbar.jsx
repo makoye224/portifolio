@@ -23,7 +23,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}>
           <p className='
-          text-[45px] 
+          text-[36px] 
           font-bold 
           font-arenq 
           uppercase 
@@ -73,8 +73,8 @@ const Navbar = () => {
                     key={nav.id}
                     className={`${
                       active === nav.title ? 'text-french' : 'text-eerieBlack'
-                    } text-[88px] font-bold font-arenq 
-                      uppercase tracking-[1px] cursor-pointer`}
+                    } text-[21px] font-bold font-nova
+                      uppercase tracking-[1px] cursor-pointer ml-5 px-2`}
                     onClick={() => {
                       setToggle(!toggle);
                       setActive(nav.title);

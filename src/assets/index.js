@@ -53,7 +53,10 @@ import space from './projects/space-hub.png';
 import neat from './projects/neat.png'
 import mindscribe from './projects/mindscribe.png'
 import sokoni from './projects/sokoni.png'
-
+import java from './tech/java.png'
+import django from './tech/django.png'
+import python from './tech/python.png'
+import next from './tech/next.png'
 
 export {
   bwmap,
@@ -104,4 +107,8 @@ export {
   neat,
   sokoni,
   mindscribe,
+  java,
+  django,
+  python,
+  next,
 };

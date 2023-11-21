@@ -12,7 +12,6 @@ import {
   tailwind,
   nodejs,
   git,
-  figma,
   postgresql,
   coverhunt,
   dcc,
@@ -21,7 +20,11 @@ import {
   mindscribe, 
   neat, 
   sokoni,
+  java,
+  django,
   resume,
+  python,
+  next,
 } from '../assets';
 
 export const navLinks = [
@@ -59,6 +62,18 @@ const services = [
 ];
 
 const technologies = [
+  {
+    name: 'java',
+    icon: java,
+  },
+  {
+    name: 'python',
+    icon: python,
+  },
+  {
+    name: 'django',
+    icon: django,
+  },
   {
     name: 'HTML 5',
     icon: html,
@@ -100,8 +115,8 @@ const technologies = [
     icon: git,
   },
   {
-    name: 'figma',
-    icon: figma,
+    name: 'next',
+    icon: next,
   },
 ];
 
