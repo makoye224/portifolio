@@ -57,6 +57,7 @@ import java from './tech/java.png'
 import django from './tech/django.png'
 import python from './tech/python.png'
 import next from './tech/next.png'
+import sneak from './projects/sneak.png'
 
 export {
   bwmap,
@@ -111,4 +112,5 @@ export {
   django,
   python,
   next,
+  sneak,
 };
