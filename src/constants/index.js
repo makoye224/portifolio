@@ -25,6 +25,7 @@ import {
   resume,
   python,
   next,
+  sneak,
 } from '../assets';
 
 export const navLinks = [
