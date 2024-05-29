@@ -121,6 +121,13 @@ const technologies = [
 ];
 
 const experiences = [
+    {
+    title: 'Software Development Engineer',
+    company_name: 'Amazon',
+    icon: microverse,
+    iconBg: '#333333',
+    date: 'May 2024 - now',
+  },
   {
     title: 'Resident Assistant',
     company_name: 'Case Western Reserve University',
@@ -159,6 +166,30 @@ const experiences = [
 ];
 
 const projects = [
+
+  
+   {
+    id: 'project-0',
+    name: 'Sneaky Squirrel',
+    description: "Sneaky Squirrel is a game designed and implemented in Unity. It's about a squirrel who has to collect acorns while faced with a number of challenges. fun to play  ",
+    tags: [
+      {
+        name: 'Unity',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'C#',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'tailwind',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: sneak,
+    repo: 'https://github.com/cwru-courses/ECSE-CSDS290-2024Team10',
+    demo: 'https://ecse-csds290.itch.io/2024-team-10-sneakysquirrel',
+  },
   {
     id: 'project-1',
     name: 'Neatify',
