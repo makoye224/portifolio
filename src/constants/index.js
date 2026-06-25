@@ -17,15 +17,12 @@ import {
   dcc,
   kelhel,
   microverse,
-  mindscribe, 
-  neat, 
-  sokoni,
+  ndotoni,
+  stays,
   java,
-  django,
   resume,
   python,
   next,
-  sneak,
 } from '../assets';
 
 export const navLinks = [
@@ -45,20 +42,20 @@ export const navLinks = [
 
 const services = [
   {
-    title: 'Frontend Developer',
-    icon: frontend,
-  },
-  {
-    title: 'Backend Developer',
+    title: 'Software Engineer',
     icon: backend,
   },
   {
-    title: 'UI/UX Design',
-    icon: ux,
+    title: 'Entrepreneur',
+    icon: prototyping,
   },
   {
-    title: 'Software Prototyping',
-    icon: prototyping,
+    title: 'Full-Stack Developer',
+    icon: frontend,
+  },
+  {
+    title: 'Mobile Developer',
+    icon: ux,
   },
 ];
 
@@ -68,44 +65,32 @@ const technologies = [
     icon: java,
   },
   {
-    name: 'python',
-    icon: python,
-  },
-  {
-    name: 'django',
-    icon: django,
-  },
-  {
-    name: 'HTML 5',
-    icon: html,
-  },
-  {
-    name: 'CSS 3',
-    icon: css,
-  },
-  {
-    name: 'JavaScript',
-    icon: javascript,
-  },
-  {
     name: 'TypeScript',
     icon: typescript,
+  },
+  {
+    name: 'python',
+    icon: python,
   },
   {
     name: 'React JS',
     icon: reactjs,
   },
   {
-    name: 'Redux Toolkit',
-    icon: redux,
-  },
-  {
-    name: 'Tailwind CSS',
-    icon: tailwind,
+    name: 'Next.js',
+    icon: next,
   },
   {
     name: 'Node JS',
     icon: nodejs,
+  },
+  {
+    name: 'JavaScript',
+    icon: javascript,
+  },
+  {
+    name: 'Tailwind CSS',
+    icon: tailwind,
   },
   {
     name: 'postgresql',
@@ -116,147 +101,102 @@ const technologies = [
     icon: git,
   },
   {
-    name: 'next',
-    icon: next,
+    name: 'HTML 5',
+    icon: html,
+  },
+  {
+    name: 'CSS 3',
+    icon: css,
+  },
+  {
+    name: 'Redux Toolkit',
+    icon: redux,
   },
 ];
 
 const experiences = [
-    {
+  {
     title: 'Software Development Engineer',
     company_name: 'Amazon',
     icon: microverse,
-    iconBg: '#333333',
-    date: 'May 2024 - now',
+    iconBg: '#EEFBF3',
+    date: 'May 2024 - Present',
+  },
+  {
+    title: 'Founder & CEO',
+    company_name: 'Ndotoni',
+    icon: kelhel,
+    iconBg: '#EEFBF3',
+    date: '2023 - Present',
+    link: 'https://www.ndotoni.com',
+  },
+  {
+    title: 'Full-Stack Developer',
+    company_name: 'Neatify',
+    icon: kelhel,
+    iconBg: '#EEFBF3',
+    date: 'September 2023 - May 2024',
   },
   {
     title: 'Resident Assistant',
     company_name: 'Case Western Reserve University',
     icon: coverhunt,
-    iconBg: '#333333',
-    date: 'Aug 2021 - now',
-  },
-  {
-    title: 'Comprehensive Web and Mobile Developer',
-    company_name: 'Neatify',
-    icon: kelhel,
-    iconBg: '#333333',
-    date: 'September 2023 - Now',
-  },
-  {
-    title: 'Customer Service Assistant',
-    company_name: 'Case Western Reserve University',
-    icon: microverse,
-    iconBg: '#333333',
-    date: 'Aug 2021 - Aug 2023',
+    iconBg: '#EEFBF3',
+    date: 'Aug 2021 - May 2024',
   },
   {
     title: 'Alumni Engagement Intern',
     company_name: 'African Leadership Academy',
     icon: dcc,
-    iconBg: '#333333',
+    iconBg: '#EEFBF3',
     date: 'Jan 2021 - Jun 2021',
-  },
-  {
-    title: 'Short Summer Course Program Facilitator',
-    company_name: 'African Leadership Academy',
-    icon: kelhel,
-    iconBg: '#333333',
-    date: 'July 2020 - Sept 2020',
   },
 ];
 
 const projects = [
-
-  
-   {
-    id: 'project-0',
-    name: 'Sneaky Squirrel',
-    description: "Sneaky Squirrel is a game designed and implemented in Unity. It's about a squirrel who has to collect acorns while faced with a number of challenges. fun to play  ",
-    tags: [
-      {
-        name: 'Unity',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'C#',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'tailwind',
-        color: 'pink-text-gradient',
-      },
-    ],
-    image: sneak,
-    repo: 'https://github.com/cwru-courses/ECSE-CSDS290-2024Team10',
-    demo: 'https://ecse-csds290.itch.io/2024-team-10-sneakysquirrel',
-  },
   {
-    id: 'project-1',
-    name: 'Neatify',
-    description: "a Tanzanian cleaning service, streamlining customer engagement with appointment booking and work showcase",
+    id: 'project-0',
+    name: 'Ndotoni',
+    description: "Ndotoni is Tanzania's verified property rental platform. We physically visit, photograph, and list properties — connecting tenants with safe housing and landlords with reliable tenants.",
     tags: [
       {
         name: 'Next.js',
         color: 'blue-text-gradient',
       },
       {
-        name: 'Sanity',
+        name: 'AWS',
         color: 'green-text-gradient',
       },
       {
-        name: 'tailwind',
+        name: 'React Native',
         color: 'pink-text-gradient',
       },
     ],
-    image: neat,
-    repo: 'https://github.com/makoye224/next-neat',
-    demo: 'https://www.neatifytz.com/',
+    image: ndotoni,
+    repo: 'https://github.com/makoye224',
+    demo: 'https://www.ndotoni.com',
   },
   {
-    id: 'project-2',
-    name: 'Mindscribe',
-    description:
-      'Mindscribe is a structured and versatile journaling platform that enables users to record their daily activities, emotions, goals, and observations, prioritizing mental well-being through a modern solution that re-imagines and digitizes the traditional journaling experience.',
+    id: 'project-1',
+    name: 'Ndotoni Stays',
+    description: "Ndotoni Stays is a short-term rental booking platform for Tanzania. Book nightly stays, party venues, photoshoot locations, and event spaces with instant booking and flexible cancellation.",
     tags: [
       {
-        name: 'react',
+        name: 'Next.js',
         color: 'blue-text-gradient',
       },
       {
-        name: 'restapi',
+        name: 'Stripe',
         color: 'green-text-gradient',
       },
       {
-        name: 'scss',
+        name: 'AWS',
         color: 'pink-text-gradient',
       },
     ],
-    image: mindscribe,
-    repo: 'https://github.com/makoye224/mindscribe23',
-    demo: 'https://mindscribe-70op.onrender.com',
-  },
-  {
-    id: 'project-3',
-    name: 'Sokoni',
-    description: 'a full-stack e-commerce website for Sokoni, enabling entrepreneurs to showcase and sell their products. The site is built using React.js, Django, PostgreSQL, and amazon s3 bucket',
-    tags: [
-      {
-        name: 'nextjs',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'supabase',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'css',
-        color: 'pink-text-gradient',
-      },
-    ],
-    image: sokoni,
-    repo: 'https://github.com/makoye224/django-sokoni',
-    demo: 'https://sokoni-django.onrender.com',
+    image: stays,
+    repo: 'https://github.com/makoye224',
+    demo: 'https://www.ndotonistays.com',
   },
 ];
 

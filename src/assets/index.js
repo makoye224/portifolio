@@ -58,6 +58,8 @@ import django from './tech/django.png'
 import python from './tech/python.png'
 import next from './tech/next.png'
 import sneak from './projects/sneak.png'
+import ndotoni from './projects/ndotoni.png'
+import stays from './projects/stays.png'
 
 export {
   bwmap,
@@ -113,4 +115,6 @@ export {
   python,
   next,
   sneak,
+  ndotoni,
+  stays,
 };

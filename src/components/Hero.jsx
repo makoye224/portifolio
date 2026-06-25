@@ -29,7 +29,7 @@ const Hero = () => {
           max-w-7xl mx-auto flex flex-row items-start
           justify-between gap-3`}>
           <div className="flex flex-col justify-center items-center mt-5 ml-3">
-            <div className="w-5 h-5 rounded-full bg-[#0a0a0a] sm:hidden" />
+            <div className="w-5 h-5 rounded-full bg-brand sm:hidden" />
             <div className="w-1 sm:h-80 h-40 bw-gradient sm:hidden" />
           </div>
 
@@ -38,15 +38,18 @@ const Hero = () => {
               className={`${styles.heroHeadText} text-eerieBlack font-poppins uppercase`}>
               Hi, I'm{' '}
               <span
-                className="sm:text-battleGray sm:text-[90px] 
-                text-eerieBlack text-[50px] font-mova
+                className="sm:text-brand sm:text-[90px] 
+                text-brand text-[50px] font-mova
                 font-extrabold uppercase">
                 Emmanuel
               </span>
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-eerieBlack`}>
-            a software engineer pursuing a Bsc. in Computer Science at Case Western Reserve University. <br className="sm:block hidden" />
-            I love solving software challenges and creating user friendly applications 
+            Software Engineer at Amazon, Seattle. <br className="sm:block hidden" />
+            Founder of{' '}
+            <a href="https://www.ndotoni.com" target="_blank" rel="noopener noreferrer" className="text-brand hover:underline">Ndotoni</a>
+            {' & '}
+            <a href="https://www.ndotonistays.com" target="_blank" rel="noopener noreferrer" className="text-brand hover:underline">Ndotoni Stays</a>.
             </p>
           </div>
           <div
@@ -62,7 +65,7 @@ const Hero = () => {
           <a href="#about">
             <div
               className="w-[35px] h-[64px] rounded-3xl border-4 
-            border-french border-dim flex
+            border-brand border-dim flex
             justify-center items-start p-2">
               <motion.div
                 animate={{
@@ -73,7 +76,7 @@ const Hero = () => {
                   repeat: Infinity,
                   repeatType: 'loop',
                 }}
-                className="w-3 h-3 rounded-full bg-taupe mb-1"
+                className="w-3 h-3 rounded-full bg-brand mb-1"
               />
             </div>
           </a>

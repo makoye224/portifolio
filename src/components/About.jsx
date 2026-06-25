@@ -19,9 +19,9 @@ const ServiceCard = ({ index, title, icon }) => {
           scale: 1,
           speed: 450,
         }}
-        className="bg-jetLight rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
+        className="bg-white rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col border border-gray-100">
         <img src={icon} alt={title} className="w-16 h-16 object-contain" />
-        <h3 className="text-taupe text-[18px] font-bold text-center">
+        <h3 className="text-eerieBlack text-[18px] font-bold text-center">
           {title}
         </h3>
       </div>
@@ -39,8 +39,12 @@ const About = () => {
 
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
-        className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
-       Emmanuel Makoye possesses a dynamic skill set, excelling in Java, Python, and Javascript, with expertise in full-stack web development using React, Next.js, Django, HTML, CSS, Git, and GitHub. His experience extends to Amazon S3, React Native, and SQL, showcasing a nuanced understanding of both front-end and back-end development. With a solid foundation in data structures and algorithms, evidenced through coursework and projects, Emmanuel has acquired theoretical knowledge and practical skills essential for a successful career in software engineering.
+        className="mt-4 text-dim text-[18px] max-w-3xl leading-[30px]">
+       Software Engineer at Amazon in Seattle. Founder of{' '}
+       <a href="https://www.ndotoni.com" target="_blank" rel="noopener noreferrer" className="text-brand font-semibold hover:underline">Ndotoni</a>
+       {' '}— Tanzania's verified property rental platform — and{' '}
+       <a href="https://www.ndotonistays.com" target="_blank" rel="noopener noreferrer" className="text-brand font-semibold hover:underline">Ndotoni Stays</a>
+       , a short-term rental and event space booking platform. I build with Java, TypeScript, React, Next.js, AWS, and React Native.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

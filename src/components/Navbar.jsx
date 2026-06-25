@@ -39,8 +39,8 @@ const Navbar = () => {
             <li
               key={nav.id}
               className={`${
-                active === nav.title ? 'text-french' : 'text-eerieBlack'
-              } hover:text-taupe text-[21px] font-medium font-mova 
+                active === nav.title ? 'text-brand' : 'text-eerieBlack'
+              } hover:text-brand text-[21px] font-medium font-mova 
                 uppercase tracking-[3px] cursor-pointer nav-links`}
               onClick={() => setActive(nav.title)}>
               <a href={`#${nav.id}`}>{nav.title}</a>
@@ -72,7 +72,7 @@ const Navbar = () => {
                     id={nav.id}
                     key={nav.id}
                     className={`${
-                      active === nav.title ? 'text-french' : 'text-eerieBlack'
+                      active === nav.title ? 'text-brand' : 'text-eerieBlack'
                     } text-[21px] font-bold font-nova
                       uppercase tracking-[1px] cursor-pointer ml-5 px-2`}
                     onClick={() => {
