@@ -1,9 +1,8 @@
 import { motion } from 'framer-motion';
-import { BallCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { technologies } from '../constants';
 import { styles } from '../styles';
-import { textVariant } from '../utils/motion';
+import { textVariant, fadeIn } from '../utils/motion';
 
 const Tech = () => {
   return (
@@ -14,10 +13,22 @@ const Tech = () => {
       </motion.div>
 
       <div className="flex flex-wrap justify-center gap-10 mt-14">
-        {technologies.map((technology) => (
-          <div className="w-28 h-28" key={technology.name}>
-            <BallCanvas icon={technology.icon} />
-          </div>
+        {technologies.map((technology, index) => (
+          <motion.div
+            key={technology.name}
+            variants={fadeIn('up', 'spring', index * 0.1, 0.5)}
+            className="w-24 h-24 flex flex-col items-center justify-center gap-2">
+            <div className="w-16 h-16 rounded-full bg-white border border-brand/20 shadow-md flex items-center justify-center p-3">
+              <img
+                src={technology.icon}
+                alt={technology.name}
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <p className="text-dim text-[12px] font-medium text-center">
+              {technology.name}
+            </p>
+          </motion.div>
         ))}
       </div>
     </>
