@@ -1,10 +1,9 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { styles } from '../styles';
 import { navLinks } from '../constants';
-// eslint-disable-next-line no-unused-vars
-import { close, menu} from '../assets';
+import { close, menu } from '../assets';
 
 const Navbar = () => {
   const [active, setActive] = useState('');
@@ -23,13 +22,13 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}>
           <p className='
-          text-[36px] 
-          font-bold 
-          font-arenq 
-          uppercase 
+          text-[36px]
+          font-bold
+          font-beckman
+          uppercase
           tracking-[1px] cursor-pointer
           text-eerieBlack'
-          
+
           >
             MAKOYE
             </p>
@@ -40,7 +39,7 @@ const Navbar = () => {
               key={nav.id}
               className={`${
                 active === nav.title ? 'text-brand' : 'text-eerieBlack'
-              } hover:text-brand text-[21px] font-medium font-mova 
+              } hover:text-brand text-[21px] font-medium font-beckman
                 uppercase tracking-[3px] cursor-pointer nav-links`}
               onClick={() => setActive(nav.title)}>
               <a href={`#${nav.id}`}>{nav.title}</a>
@@ -73,7 +72,7 @@ const Navbar = () => {
                     key={nav.id}
                     className={`${
                       active === nav.title ? 'text-brand' : 'text-eerieBlack'
-                    } text-[21px] font-bold font-nova
+                    } text-[21px] font-bold font-beckman
                       uppercase tracking-[1px] cursor-pointer ml-5 px-2`}
                     onClick={() => {
                       setToggle(!toggle);

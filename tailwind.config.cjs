@@ -58,11 +58,7 @@ export default {
         tech: "linear-gradient(165deg, rgba(238,251,243,0.95) 100%, rgba(29,191,83,0.1) 100%), url('/src/assets/backgrounds/nairobi.png')",
       },
       fontFamily: {
-        arenq: ['Arenq'],
         beckman: ['Beckman'],
-        mova: ['Mova'],
-        overcameBold: ['Overcame Bold'],
-        overcameOutline: ['Overcame Outline'],
         poppins: ['Poppins', 'sans-serif'],
       },
     },

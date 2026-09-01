@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+/* eslint-disable react/prop-types */
 import { motion } from 'framer-motion';
 import { SectionWrapper } from '../hoc';
 import { styles } from '../styles';
@@ -7,112 +7,102 @@ import { projects } from '../constants';
 import { fadeIn, textVariant, staggerContainer } from '../utils/motion';
 
 const ProjectCard = ({
-  id,
   name,
   description,
   image,
   repo,
   demo,
+  appStore,
+  playStore,
   index,
-  active,
-  handleClick,
 }) => {
   return (
     <motion.div
-      variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
-      className={`relative ${
-        active === id ? 'lg:flex-[3.5] flex-[10]' : 'lg:flex-[0.5] flex-[2]'
-      } flex items-center justify-center min-w-[170px] 
-      h-[420px] cursor-pointer card-shadow`}
-      onClick={() => handleClick(id)}>
-      <div
-        className="absolute top-0 left-0 z-10 bg-eerieBlack 
-      h-full w-full opacity-[0.35] rounded-[24px]"></div>
-
-      <img
-        src={image}
-        alt={name}
-        className="absolute w-full h-full object-cover rounded-[24px]"
-      />
-
-      {active !== id ? (
-        <div className="flex items-center justify-start pr-[4.5rem]">
-          <h3
-            className="font-extrabold font-beckman uppercase w-[200px] h-[30px] 
-        whitespace-nowrap sm:text-[27px] text-[18px] text-white tracking-[1px]
-        absolute z-0 lg:bottom-[7rem] lg:rotate-[-90deg] lg:origin-[0,0]
-        leading-none z-20">
-            {name}
-          </h3>
+      variants={fadeIn('up', 'spring', index * 0.3, 0.75)}
+      className="relative flex flex-col w-full min-h-[420px] rounded-[24px] card-shadow overflow-hidden">
+      <div className="relative h-[220px] w-full">
+        <img
+          src={image}
+          alt={name}
+          className="absolute w-full h-full object-cover"
+        />
+        <div
+          onClick={() => window.open(repo, '_blank')}
+          className="absolute top-3 right-3 bg-brand sm:w-11 sm:h-11 w-10 h-10 rounded-full
+            flex justify-center items-center cursor-pointer
+            sm:opacity-[0.9] opacity-[0.8]">
+          <img
+            src={github}
+            alt="source code"
+            className="w-4/5 h-4/5 object-contain"
+          />
         </div>
-      ) : (
-        <>
-          <div
-            className="absolute bottom-0 p-8 justify-start w-full 
-            flex-col bg-[rgba(17,24,39,0.85)] rounded-b-[24px] z-20">
-            <div className="absolute inset-0 flex justify-end m-3">
-              <div
-                onClick={() => window.open(repo, '_blank')}
-                className="bg-brand sm:w-11 sm:h-11 w-10 h-10 rounded-full 
-                  flex justify-center items-center cursor-pointer
-                  sm:opacity-[0.9] opacity-[0.8]">
-                <img
-                  src={github}
-                  alt="source code"
-                  className="w-4/5 h-4/5 object-contain"
-                />
-              </div>
-            </div>
+      </div>
 
-            <h2
-              className="font-bold sm:text-[32px] text-[24px] 
-              text-white uppercase font-beckman sm:mt-0 -mt-[1rem]">
-              {name}
-            </h2>
-            <p
-              className="text-gray-300 sm:text-[14px] text-[12px] 
-              max-w-3xl sm:leading-[24px] leading-[18px]
-              font-poppins tracking-[1px]">
-              {description}
-            </p>
-            <button
-              className="live-demo flex justify-between 
-              sm:text-[16px] text-[14px] text-white 
-              font-bold font-beckman items-center py-5 pl-2 pr-3 
-              whitespace-nowrap gap-1 sm:w-[138px] sm:h-[50px] 
-              w-[125px] h-[46px] rounded-[10px] glassmorphism 
-              sm:mt-[22px] mt-[16px] hover:bg-brandDark 
-              hover:text-white transition duration-[0.2s] 
-              ease-in-out"
-              onClick={() => window.open(demo, '_blank')}
-              onMouseOver={() => {
-                document
-                  .querySelector('.btn-icon')
-                  .setAttribute('src', pineappleHover);
-              }}
-              onMouseOut={() => {
-                document
-                  .querySelector('.btn-icon')
-                  .setAttribute('src', pineapple);
-              }}>
-              <img
-                src={pineapple}
-                alt="pineapple"
-                className="btn-icon sm:w-[34px] sm:h-[34px] 
-                  w-[30px] h-[30px] object-contain"
-              />
-              VISIT SITE
-            </button>
+      <div className="flex flex-col flex-1 p-8 bg-[#111827]">
+        <h2 className="font-bold sm:text-[32px] text-[24px] text-white uppercase font-beckman">
+          {name}
+        </h2>
+        <p className="text-gray-300 sm:text-[14px] text-[12px] sm:leading-[24px] leading-[18px] font-poppins tracking-[1px] mt-2">
+          {description}
+        </p>
+        <button
+          className="live-demo flex justify-between
+          sm:text-[16px] text-[14px] text-white
+          font-bold font-beckman items-center py-5 pl-2 pr-3
+          whitespace-nowrap gap-1 sm:w-[138px] sm:h-[50px]
+          w-[125px] h-[46px] rounded-[10px] glassmorphism
+          mt-auto pt-[22px] hover:bg-brandDark
+          hover:text-white transition duration-[0.2s]
+          ease-in-out"
+          onClick={() => window.open(demo, '_blank')}
+          onMouseOver={(e) => {
+            e.currentTarget
+              .querySelector('img')
+              .setAttribute('src', pineappleHover);
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget
+              .querySelector('img')
+              .setAttribute('src', pineapple);
+          }}>
+          <img
+            src={pineapple}
+            alt="pineapple"
+            className="sm:w-[34px] sm:h-[34px]
+              w-[30px] h-[30px] object-contain"
+          />
+          VISIT SITE
+        </button>
+
+        {(appStore || playStore) && (
+          <div className="flex gap-4 mt-3 font-poppins">
+            {appStore && (
+              <a
+                href={appStore}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 text-[13px] hover:text-brand hover:underline">
+                App Store
+              </a>
+            )}
+            {playStore && (
+              <a
+                href={playStore}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 text-[13px] hover:text-brand hover:underline">
+                Google Play
+              </a>
+            )}
           </div>
-        </>
-      )}
+        )}
+      </div>
     </motion.div>
   );
 };
 
 const Projects = () => {
-  const [active, setActive] = useState('project-0');
-
   return (
     <div className="-mt-[6rem]">
       <motion.div variants={textVariant()}>
@@ -128,7 +118,7 @@ const Projects = () => {
           <a href="https://www.ndotoni.com" target="_blank" rel="noopener noreferrer" className="text-brand font-semibold hover:underline">Ndotoni</a>
           {' '}and{' '}
           <a href="https://www.ndotonistays.com" target="_blank" rel="noopener noreferrer" className="text-brand font-semibold hover:underline">Ndotoni Stays</a>
-          {' '}from the ground up — full-stack platforms serving the Tanzanian rental market. These are live services with real users, not demos.
+          {' '}from the ground up, full-stack platforms serving the Tanzanian rental market. These are live services with real users, not demos.
         </motion.p>
       </div>
 
@@ -138,15 +128,9 @@ const Projects = () => {
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto flex flex-col`}>
-        <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
+        <div className="mt-[50px] grid lg:grid-cols-2 grid-cols-1 gap-8">
           {projects.map((project, index) => (
-            <ProjectCard
-              key={project.id}
-              index={index}
-              {...project}
-              active={active}
-              handleClick={setActive}
-            />
+            <ProjectCard key={project.id} index={index} {...project} />
           ))}
         </div>
       </motion.div>

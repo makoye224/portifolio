@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { SectionWrapper } from '../hoc';
@@ -16,12 +17,21 @@ const Contact = () => {
 
         <div className="mt-10 flex flex-col gap-4 font-poppins">
           <p className="text-dim text-[18px]">
-            Want to reach out? Drop me an email.
+            I built and shipped Ndotoni and Ndotoni Stays from the ground up,
+            and I'm an SDE at Amazon. If you want to talk about a role,
+            a collaboration, or the products, I'd love to hear from you.
           </p>
           <a
             href="mailto:makoye224@gmail.com"
             className="text-brand text-[22px] font-semibold hover:underline">
             makoye224@gmail.com
+          </a>
+          <a
+            href="https://github.com/makoye224"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-eerieBlack text-[16px] font-medium hover:text-brand hover:underline">
+            github.com/makoye224
           </a>
         </div>
       </motion.div>

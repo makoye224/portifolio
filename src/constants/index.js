@@ -1,29 +1,4 @@
-import {
-  frontend,
-  backend,
-  ux,
-  prototyping,
-  javascript,
-  typescript,
-  html,
-  css,
-  reactjs,
-  redux,
-  tailwind,
-  nodejs,
-  git,
-  postgresql,
-  coverhunt,
-  dcc,
-  kelhel,
-  microverse,
-  ndotoni,
-  stays,
-  java,
-  resume,
-  python,
-  next,
-} from '../assets';
+import { ndotoni, stays, resume } from '../assets';
 
 export const navLinks = [
   {
@@ -31,8 +6,16 @@ export const navLinks = [
     title: 'About',
   },
   {
+    id: 'tech',
+    title: 'Technologies',
+  },
+  {
     id: 'projects',
     title: 'Projects',
+  },
+  {
+    id: 'work',
+    title: 'Experience',
   },
   {
     id: 'contact',
@@ -43,74 +26,83 @@ export const navLinks = [
 const services = [
   {
     title: 'Software Engineer',
-    icon: backend,
   },
   {
     title: 'Entrepreneur',
-    icon: prototyping,
   },
   {
     title: 'Full-Stack Developer',
-    icon: frontend,
   },
   {
     title: 'Mobile Developer',
-    icon: ux,
   },
 ];
 
 const technologies = [
   {
     name: 'java',
-    icon: java,
+    short: 'JV',
+    color: '#F89820',
   },
   {
     name: 'TypeScript',
-    icon: typescript,
+    short: 'TS',
+    color: '#3178C6',
   },
   {
     name: 'python',
-    icon: python,
+    short: 'PY',
+    color: '#3776AB',
   },
   {
     name: 'React JS',
-    icon: reactjs,
+    short: 'RJ',
+    color: '#61DAFB',
   },
   {
     name: 'Next.js',
-    icon: next,
+    short: 'NX',
+    color: '#111827',
   },
   {
     name: 'Node JS',
-    icon: nodejs,
+    short: 'ND',
+    color: '#339933',
   },
   {
     name: 'JavaScript',
-    icon: javascript,
+    short: 'JS',
+    color: '#F0DB4F',
   },
   {
     name: 'Tailwind CSS',
-    icon: tailwind,
+    short: 'TW',
+    color: '#06B6D4',
   },
   {
     name: 'postgresql',
-    icon: postgresql,
+    short: 'PG',
+    color: '#336791',
   },
   {
     name: 'git',
-    icon: git,
+    short: 'GIT',
+    color: '#F05033',
   },
   {
     name: 'HTML 5',
-    icon: html,
+    short: 'H5',
+    color: '#E34F26',
   },
   {
     name: 'CSS 3',
-    icon: css,
+    short: 'C3',
+    color: '#1572B6',
   },
   {
     name: 'Redux Toolkit',
-    icon: redux,
+    short: 'RX',
+    color: '#764ABC',
   },
 ];
 
@@ -118,37 +110,27 @@ const experiences = [
   {
     title: 'Software Development Engineer',
     company_name: 'Amazon',
-    icon: microverse,
-    iconBg: '#EEFBF3',
     date: 'May 2024 - Present',
   },
   {
     title: 'Founder & CEO',
     company_name: 'Ndotoni',
-    icon: kelhel,
-    iconBg: '#EEFBF3',
     date: '2023 - Present',
     link: 'https://www.ndotoni.com',
   },
   {
     title: 'Full-Stack Developer',
     company_name: 'Neatify',
-    icon: kelhel,
-    iconBg: '#EEFBF3',
     date: 'September 2023 - May 2024',
   },
   {
     title: 'Resident Assistant',
     company_name: 'Case Western Reserve University',
-    icon: coverhunt,
-    iconBg: '#EEFBF3',
     date: 'Aug 2021 - May 2024',
   },
   {
     title: 'Alumni Engagement Intern',
     company_name: 'African Leadership Academy',
-    icon: dcc,
-    iconBg: '#EEFBF3',
     date: 'Jan 2021 - Jun 2021',
   },
 ];
@@ -157,7 +139,7 @@ const projects = [
   {
     id: 'project-0',
     name: 'Ndotoni',
-    description: "Ndotoni is Tanzania's verified property rental platform. We physically visit, photograph, and list properties — connecting tenants with safe housing and landlords with reliable tenants.",
+    description: "Ndotoni is Tanzania's verified property rental platform. We physically visit, photograph, and list properties, connecting tenants with safe housing and landlords with reliable tenants.",
     tags: [
       {
         name: 'Next.js',
@@ -197,6 +179,8 @@ const projects = [
     image: stays,
     repo: 'https://github.com/makoye224',
     demo: 'https://www.ndotonistays.com',
+    appStore: 'https://apps.apple.com/us/app/ndotoni/id6767931205',
+    playStore: 'https://play.google.com/store/apps/details?id=com.ndotoni.app',
   },
 ];
 

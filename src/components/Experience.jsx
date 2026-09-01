@@ -20,9 +20,6 @@ const ExperienceCard = ({ experience }) => (
       boxShadow:
         'rgba(29, 191, 83, 0.08) 0px 10px 15px -3px, rgba(0, 0, 0, 0.03) 0px 4px 6px -2px',
     }}
-    contentArrowStyle={{
-      borderRight: '7px solid  #1DBF53',
-    }}
     date={
       <div>
         <h3 className="text-dim text-[18px] font-bold font-beckman">
@@ -30,14 +27,12 @@ const ExperienceCard = ({ experience }) => (
         </h3>
       </div>
     }
-    iconStyle={{ background: experience.iconBg }}
+    iconStyle={{ background: '#1DBF53' }}
     icon={
       <div className="flex justify-center items-center w-full h-full">
-        <img
-          src={experience.icon}
-          alt={experience.company_name}
-          className="w-[60%] h-[60%] object-contain"
-        />
+        <span className="text-white text-[18px] font-bold font-beckman">
+          {experience.company_name.slice(0, 2).toUpperCase()}
+        </span>
       </div>
     }>
     <div>
@@ -45,7 +40,7 @@ const ExperienceCard = ({ experience }) => (
         {experience.title}
       </h3>
       <p
-        className="text-brand text-[22px] font-semibold font-overcameBold tracking-[1px]"
+        className="text-brand text-[22px] font-semibold font-beckman tracking-[1px]"
         style={{ margin: 0 }}>
         {experience.link ? (
           <a href={experience.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
@@ -85,9 +80,6 @@ const Experience = () => {
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
-            }}
-            contentArrowStyle={{
-              borderRight: '7px solid  #1DBF53',
             }}
             iconStyle={{ background: '#1DBF53' }}
             icon={
